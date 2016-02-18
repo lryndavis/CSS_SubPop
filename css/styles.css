@@ -1,4 +1,10 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
   font-family: 'Adobe-Caslon-Pro';
 }
 
@@ -11,7 +17,7 @@ ul {
   padding-left: 0;
 }
 
-img {
+.column1 img {
   max-width: 100%;
   margin-bottom: 20px;
 }
@@ -19,24 +25,55 @@ img {
 .column1 {
  text-align: center;
  padding: 0;
+ width: 45%;
+ margin-right: 20px;
 
 }
 
+.carousel-inner {
+  margin: 0 auto;
+}
+
+
 .column2 {
-  text-align: center;
   padding: 0;
+   width: 52%;
+   margin-top: 10px;
+   border-left: 1px solid black;
+   padding-left: 20px;
+}
+
+.column2 ol {
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  z-index: 10;
+
 }
 
 .container {
   margin: 0 auto;
-  width: 98%;
+  width: 100%;
+  padding: 0;
 }
+
 
 
 .col-fixed {
   width: 900px;
-  margin: 0 auto;
+  margin: 20px auto;
+  overflow: hidden;
+  /*border-bottom: 1px solid black;*/
 }
+
+.mainhr {
+  border-top: 2px solid black;
+  width: 900px;
+
+}
+
+
+
 
 .double {
   border-top: 3px double #8c8b8b;
@@ -61,7 +98,7 @@ img {
   text-transform: uppercase;
   color: black;
   padding: 0 7px;
-  border-right: 1px solid red;
+  border-right: 1px solid #F1592A;;
 }
 
 ul {
@@ -84,16 +121,175 @@ ul {
 
 .column1 span {
   color: #D1D2D4;
+
 }
 
-@media (max-width: 915px) {
+
+.carousel-inner span {
+  color: #F1592A;;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+.carousel-inner p {
+  margin-top: 0;
+}
+
+.column3 {
+  width: 65%;
+  margin-right: 10px;
+}
+
+.subrow {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  margin-top: 15px;
+}
+
+.column3 img {
+  width: 25%;
+}
+
+.sub {
+  float: right;
+  width: 70%;
+  text-transform: uppercase;
+}
+
+.sub a {
+  padding-right: 15px;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.sub a:nth-child(3) {
+  color: #b8ada9;
+}
+
+h4 {
+  text-transform: uppercase;
+  color: #F1592A;
+}
+
+.seeMore {
+  color: #F1592A;
+  text-align: right;
+}
+
+.list1 li,
+.list2 li {
+  display: block;
+}
+
+.list1 {
+  float: left;
+  width: 48%;
+}
+.list2 {
+  float: left;
+  width: 48%;
+}
+
+.column4 {
+  border-left: 1px solid black;
+  padding-left: 15px;
+  width: 33%;
+}
+
+.column4 img {
+  width: 100%;
+}
+
+.secondrow {
+  margin-bottom: 40px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+  z-index: 10;
+
+}
+
+.col-fixed {
+  margin-bottom: 200px;
+}
+
+
+
+@media (max-width: 990px) {
+
+  .container {
+    width: 98%;
+  }
+
   .col-fixed {
     width: 100%;
     }
   .column1 {
     width: 100%;
   }
+
+  .item img {
+    width: 58%;
+    float: left;
+    height: auto;
+  }
+
+  .carouselText {
+    width: 40%;
+    float: left;
+    padding-right: 10px;
+  }
+
+  .column2 img {
+    margin: 0 auto;
+  }
+
   .column2 {
     width: 100%;
   }
-}
+
+  .column3 {
+    width: 100%;
+  }
+
+  .column4 {
+    width: 100%;
+  }
+
+  .column4 img {
+    width: 60%;
+    margin-right: 23%;
+    margin-left: 23%;
+    }
+
+  hr.last {
+    display: none;
+  }
+
+
+  @media (max-width: 750px) {
+    .carouselText {
+      width: 100%;
+      float: none;
+    }
+
+    .item img {
+      width: 100%;
+      float: none;
+    }
+
+    footer {
+      display: none;
+    }
+
+
+  }
